@@ -27,6 +27,14 @@ The goal was to replicate a real-world ISP environment where Customer A (e.g., a
 * **Data Plane:** The Core router (`P1`) only looks at the Transport Label. It does not run BGP and holds no customer routing information, ensuring high scalability.
 
 ## 🧪 Verification & Proof of Concept
+Analysis:
+Label 17 (Outer): Transport Label used by P1 to reach the egress router PE2.
+Label 20 (Inner): VPN Label used by PE2 to identify VRF CUST_A.
+
+## 📂 Repository Structure
+/configs - Final running-configurations for PE1, P1, and PE2 (Cisco IOS-XE).
+/images - Topology diagrams and verification screenshots.
+Project simulated using Cisco Modeling Labs (CML).
 
 ### A. End-to-End Connectivity (Multi-Tenancy)
 Successful connectivity between geographically separated sites for two different clients using overlapping IPs.
@@ -47,16 +55,3 @@ Tracing the route to 192.168.2.1
 VRF info: (vrf in name/id, vrf out name/id)
   1 10.0.0.2 [MPLS: Labels 17/20 Exp 0] 2 msec 2 msec 3 msec
   2 192.168.2.1 3 msec * 2 msec
-  
-## Analysis:
-
-Label 17 (Outer): Transport Label used by P1 to reach the egress router PE2.
-
-Label 20 (Inner): VPN Label used by PE2 to identify VRF CUST_A.
-
-## 📂 Repository Structure
-/configs - Final running-configurations for PE1, P1, and PE2 (Cisco IOS-XE).
-
-/images - Topology diagrams and verification screenshots.
-
-Project simulated using Cisco Modeling Labs (CML).
