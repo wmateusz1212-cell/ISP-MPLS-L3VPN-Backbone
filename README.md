@@ -44,9 +44,6 @@ The `traceroute` command executed from the PE Router proves that traffic is enca
 PE1# traceroute vrf CUST_A 192.168.2.1
 Type escape sequence to abort.
 Tracing the route to 192.168.2.1
-VRF info: (vrf in name/id, vrf out name/id)
-  1 10.0.0.2 [MPLS: Labels 17/20 Exp 0] 2 msec 2 msec 3 msec
-  2 192.168.2.1 3 msec * 2 msec
 
 Analysis:
 
@@ -58,3 +55,8 @@ Label 20 (Inner): VPN Label used by PE2 to identify VRF CUST_A.
 /configs - Final running-configurations for PE1, P1, and PE2 (Cisco IOS-XE).
 
 /images - Topology diagrams and verification screenshots.
+
+Project simulated using Cisco Modeling Labs (CML).
+VRF info: (vrf in name/id, vrf out name/id)
+  1 10.0.0.2 [MPLS: Labels 17/20 Exp 0] 2 msec 2 msec 3 msec
+  2 192.168.2.1 3 msec * 2 msec
