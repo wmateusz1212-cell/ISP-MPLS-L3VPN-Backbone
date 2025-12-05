@@ -58,5 +58,3 @@ Label 20 (Inner): VPN Label used by PE2 to identify VRF CUST_A.
 /configs - Final running-configurations for PE1, P1, and PE2 (Cisco IOS-XE).
 
 /images - Topology diagrams and verification screenshots.
-
-Project simulated using Cisco Modeling Labs (CML).
